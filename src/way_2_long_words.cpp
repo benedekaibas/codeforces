@@ -7,15 +7,24 @@ string return_str(string input_text){
 }
 
 char store_first_element(){
-  string text = return_str;
+  string text;
+  cout << "Enter a text: ";
+  cin >> text;
 
-  for(char e : text){
+  string user_text = return_str(text);
+
+  for(char f : text){
     return text[0];
+  }
+
+  for(char l : text){
+    return text[-1];
   }
 }
 
+
+
 int main(){
-  string text = "Hey";
-  string output = return_str(text);
-  cout << output;
+  char result = store_first_element();
+  cout << result; 
 }
