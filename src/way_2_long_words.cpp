@@ -6,32 +6,17 @@ string return_str(string input_text){
   return input_text;
 }
 
-char store_first_element(){
+char return_first_char(){
   string text;
-  cout << "Enter a text: ";
+  cout << "Enter a text here: ";
   cin >> text;
 
-  string user_text = return_str(text);
+  string res = return_str(text);
 
-  for(char f : text){
-    return text[0];
-  }
-}
-
-char store_last_element(){
-  string text;
-  cout << "Enter a text: ";
-  cin >> text;
-
-  for(char l : text){
-    return text[-1];
-  }
+  return res[0];
 }
 
 int main(){
-  char result = store_first_element();
-  cout << result;
-
-  char second_result = store_last_element();
-  cout << second_result;
+  char result = return_first_char();
+  cout << "First char is: " << result << endl;
 }
