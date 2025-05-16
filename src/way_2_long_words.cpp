@@ -16,15 +16,22 @@ char store_first_element(){
   for(char f : text){
     return text[0];
   }
+}
+
+char store_last_element(){
+  string text;
+  cout << "Enter a text: ";
+  cin >> text;
 
   for(char l : text){
     return text[-1];
   }
 }
 
-
-
 int main(){
   char result = store_first_element();
-  cout << result; 
+  cout << result;
+
+  char second_result = store_last_element();
+  cout << second_result;
 }
