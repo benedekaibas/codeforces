@@ -2,33 +2,23 @@
 using namespace std;
 
 
-string return_str(){
-  string text;
-  cout << "Enter a text here: ";
-  cin >> text;
-
-  return text;
+string return_str(string name){
+  return name;
 }
 
-char return_first_char(){
-
-  string res = return_str();
-  return res[0];
-}
-
-string return_last_char(){
-  string res = return_str();
-
-  char last_char = res.back();
-
-  char* p = &last_char;
-  return res.erase(*p);
+void rm_chars(string (*func)(string)){
+  string name;
+  string snd_name = "Benedek";
+  cout << func(name) << endl; 
+  cout << snd_name << endl;
 }
 
 int main(){
-  char first = return_first_char();
-  cout << "First char is: " << first << endl;
+  string name;
+  cout << "Enter your name: ";
+  cin >> name;
 
-  string last = return_last_char();
-  cout << "Last char is: " << last << endl;
+  return_str(name);
+
+  rm_chars(return_str);
 }
